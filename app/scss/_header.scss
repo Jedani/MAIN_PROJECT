@@ -1,7 +1,7 @@
 .header{
 
 	nav {
-		padding: 24px;
+		padding:1.0625rem 1.5 rem;
 	}
 
 
@@ -26,9 +26,35 @@
 	}
 
 	&__links{
+		border: 2px solid blue;
 
 		a{
-			font-size: $font-med;
+			font-size: $font-sm;
+			color: grey;
+			transition: color 250ms ease-in-out;
+			position: relative;
+
+
+			&:not(:last-child) {
+				margin-right: 32px;
+			}
+
+			&::before{
+				content: "";
+				position: absolute;
+				display: block;
+				background-color: green;
+				height: 5px;
+				left: 0;
+				right: 0;
+				bottom: -30px;
+			}
+
+			&:hover {
+				color: darkred;
+			}
 		}
 	}
+
+
 }

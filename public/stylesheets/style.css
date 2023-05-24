@@ -11,6 +11,12 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.3;
+  font: sans-serif;
+  font-size: 1.125rem;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
 }
 
 .flex {
@@ -26,8 +32,20 @@ body {
   align-items: center;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5 rem;
 }
 .header__menu span {
   display: block;
@@ -38,8 +56,30 @@ body {
 .header__menu span:not(:last-child) {
   margin-bottom: 3px;
 }
+.header__links {
+  border: 2px solid blue;
+}
 .header__links a {
-  font-size: 1em;
+  font-size: 0.875rem;
+  color: grey;
+  transition: color 250ms ease-in-out;
+  position: relative;
+}
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+.header__links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: green;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+}
+.header__links a:hover {
+  color: darkred;
 }
 
 /*# sourceMappingURL=style.css.map */
