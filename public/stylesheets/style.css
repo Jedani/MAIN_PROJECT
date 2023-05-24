@@ -44,8 +44,11 @@ a, a:visited, a:hover {
   }
 }
 
+.header {
+  border: 3px solid grey;
+}
 .header nav {
-  padding: 1.0625rem 1.5 rem;
+  padding: 1.0625rem 1.5rem;
 }
 .header__menu span {
   display: block;
@@ -56,13 +59,10 @@ a, a:visited, a:hover {
 .header__menu span:not(:last-child) {
   margin-bottom: 3px;
 }
-.header__links {
-  border: 2px solid blue;
-}
 .header__links a {
   font-size: 0.875rem;
   color: grey;
-  transition: color 250ms ease-in-out;
+  transition: color 350ms ease-in-out;
   position: relative;
 }
 .header__links a:not(:last-child) {
@@ -72,14 +72,19 @@ a, a:visited, a:hover {
   content: "";
   position: absolute;
   display: block;
-  background-color: green;
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -30px;
+  bottom: -24px;
+  background-color: green;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 }
 .header__links a:hover {
   color: darkred;
+}
+.header__links a:hover::before {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

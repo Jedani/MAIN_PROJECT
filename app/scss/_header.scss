@@ -1,7 +1,8 @@
 .header{
+	border: 3px solid grey;
 
 	nav {
-		padding:1.0625rem 1.5 rem;
+		padding:1.0625rem 1.5rem;
 	}
 
 
@@ -26,12 +27,11 @@
 	}
 
 	&__links{
-		border: 2px solid blue;
 
 		a{
 			font-size: $font-sm;
 			color: grey;
-			transition: color 250ms ease-in-out;
+			transition: color 350ms ease-in-out;
 			position: relative;
 
 
@@ -43,15 +43,21 @@
 				content: "";
 				position: absolute;
 				display: block;
-				background-color: green;
 				height: 5px;
 				left: 0;
 				right: 0;
-				bottom: -30px;
+				bottom: -24px;
+				background-color: green;
+				opacity: 0;
+				transition: opacity 300ms ease-in-out;
 			}
 
 			&:hover {
 				color: darkred;
+
+				&::before{
+					opacity:1;
+				}
 			}
 		}
 	}
