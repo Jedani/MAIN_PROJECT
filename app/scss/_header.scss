@@ -1,66 +1,81 @@
-.header{
-	border: 3px solid grey;
+.header {
+    border: 3px solid grey;
 
-	nav {
-		padding:1.0625rem 1.5rem;
-	}
-
-
-
-	&__logo{
-
-	}
-
-	&__menu{
-
-		span{
-			display: block;
-			width: 26px;
-			height: 2px;
-			background-color: darkblue;
-
-			&:not(:last-child){
-				margin-bottom: 3px;
-			}
-		}
-
-	}
-
-	&__links{
-
-		a{
-			font-size: $font-sm;
-			color: grey;
-			transition: color 350ms ease-in-out;
-			position: relative;
+    nav {
+        padding: 1.0625rem 1.5rem;
+    }
 
 
-			&:not(:last-child) {
-				margin-right: 32px;
-			}
 
-			&::before{
-				content: "";
-				position: absolute;
-				display: block;
-				height: 5px;
-				left: 0;
-				right: 0;
-				bottom: -24px;
-				background-color: green;
-				opacity: 0;
-				transition: opacity 300ms ease-in-out;
-			}
+    &__logo {}
 
-			&:hover {
-				color: darkred;
+    &__menu {
 
-				&::before{
-					opacity:1;
-				}
-			}
-		}
-	}
+        span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: black;
+            transition: all 400ms ease-out;
+            transform-origin: 6px 1px;
+
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+
+        &.open {
+            span:first-child {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+
+    &__links {
+
+        a {
+            font-size: $font-sm;
+            color: grey;
+            transition: color 350ms ease-in-out;
+            position: relative;
+
+
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -24px;
+                background-color: green;
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover {
+                color: darkred;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 
 
 }

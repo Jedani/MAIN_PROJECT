@@ -54,10 +54,21 @@ a, a:visited, a:hover {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: darkblue;
+  background-color: black;
+  transition: all 400ms ease-out;
+  transform-origin: 6px 1px;
 }
 .header__menu span:not(:last-child) {
   margin-bottom: 3px;
+}
+.header__menu.open span:first-child {
+  transform: rotate(45deg);
+}
+.header__menu.open span:nth-child(2) {
+  opacity: 0;
+}
+.header__menu.open span:last-child {
+  transform: rotate(-45deg);
 }
 .header__links a {
   font-size: 0.875rem;
