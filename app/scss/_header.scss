@@ -15,7 +15,6 @@
 }
 
 .header {
-    border: 3px solid grey;
 
     nav {
         padding: 1.0625rem 1.5rem;
@@ -24,7 +23,6 @@
     &__logo {}
 
     &__menu {
-
         span {
             display: block;
             width: 26px;
@@ -88,6 +86,24 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+
+    //have to finish this later with better styles from the internet
+    &__list {
+        background: skyblue;
+        padding: 1.625rem;
+        margin-top: 1rem;
+        display: none;
+
+
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            text-align: center;
+            color: grey;
+            border: 2px solid black;
         }
     }
 

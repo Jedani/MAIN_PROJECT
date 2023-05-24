@@ -59,9 +59,6 @@ a, a:visited, a:hover {
   translate: 0 4rem;
 }
 
-.header {
-  border: 3px solid grey;
-}
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -111,6 +108,19 @@ a, a:visited, a:hover {
 }
 .header__links a:hover::before {
   opacity: 1;
+}
+.header__list {
+  background: skyblue;
+  padding: 1.625rem;
+  margin-top: 1rem;
+  display: none;
+}
+.header__list a {
+  display: block;
+  padding: 0.625rem;
+  text-align: center;
+  color: grey;
+  border: 2px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
