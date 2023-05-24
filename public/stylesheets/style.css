@@ -1,3 +1,4 @@
+@keyframes fade-in {}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -42,6 +43,20 @@ a, a:visited, a:hover {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(blue, transparent);
+  display: none;
+}
+.overlay.scroll {
+  display: block;
+  translate: 0 4rem;
 }
 
 .header {
