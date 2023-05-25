@@ -4,7 +4,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -16,8 +18,21 @@ body {
   font-size: 1.125rem;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
+}
+
+button,
+.button {
+  padding: 0.875rem 1.875rem;
+  background: linear-gradient(to right, skyblue, grey);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: ghostwhite;
+  font-weight: 400;
 }
 
 .flex {
@@ -123,11 +138,11 @@ a, a:visited, a:hover {
 }
 
 .hero__image {
-  background-image: url();
+  background-image: url("../images/hero-bkg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 2px solid red;
+  min-height: 26rem;
 }
 
 /*# sourceMappingURL=style.css.map */
