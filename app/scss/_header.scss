@@ -56,10 +56,10 @@
     &__links {
 
         a {
+            position: relative;
             font-size: $font-sm;
             color: grey;
             transition: color 350ms ease-in-out;
-            position: relative;
 
 
             &:not(:last-child) {
@@ -93,6 +93,11 @@
     &__cta {
         font-size: small;
         color: ghostwhite;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 
 

@@ -47,6 +47,9 @@ button,
 .flex-ai-c {
   align-items: center;
 }
+.flex-fd-col {
+  flex-direction: column;
+}
 
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
@@ -98,10 +101,10 @@ button,
   transform: rotate(-45deg);
 }
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: grey;
   transition: color 350ms ease-in-out;
-  position: relative;
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
@@ -127,6 +130,10 @@ button,
 .header__cta {
   font-size: small;
   color: ghostwhite;
+  transition: opacity 300ms ease-in-out;
+}
+.header__cta:hover {
+  opacity: 0.75;
 }
 .header__list {
   background: skyblue;
@@ -147,6 +154,9 @@ button,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 26rem;
+}
+.hero__text {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
