@@ -120,7 +120,14 @@ a, a:visited, a:hover {
   padding: 0.625rem;
   text-align: center;
   color: grey;
-  border: 2px solid black;
+}
+
+.hero__image {
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
