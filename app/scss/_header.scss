@@ -86,8 +86,15 @@
                     opacity: 1;
                 }
             }
+
         }
     }
+
+    &__cta {
+        font-size: small;
+        color: ghostwhite;
+    }
+
 
     //have to finish this later with better styles from the internet
     &__list {
