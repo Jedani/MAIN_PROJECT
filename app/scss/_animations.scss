@@ -4,3 +4,27 @@
 
     to {}
 }
+
+@keyframes animateWave {
+
+    0% {
+        background-position-x: 62.5rem;
+    }
+
+    100% {
+        background-position-x: 0;
+    }
+
+}
+
+@keyframes animateWave_1 {
+
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 62.5rem;
+    }
+
+}
