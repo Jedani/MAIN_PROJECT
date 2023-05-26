@@ -1,0 +1,17 @@
+.hero {
+
+
+    &__image {
+        background-image: url('../images/hero-bkg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 26rem;
+
+        &::before {}
+    }
+
+    &__text {
+        margin-top: 1rem;
+    }
+}

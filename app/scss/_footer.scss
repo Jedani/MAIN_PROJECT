@@ -1,0 +1,64 @@
+.footer {
+    background-color: darkblue;
+    padding: 0 1rem;
+    text-align: center;
+
+    //styles for the desktop layout
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "logo links list text"
+            "links links list text"
+        ;
+    }
+
+    a {
+        color: white;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 1.8rem;
+
+        @include breakpoint-up(large) {
+            grid-area: logo;
+        }
+    }
+
+
+    &__links {
+        margin-bottom: 1.8rem;
+
+        a:not(:last-child) {
+            display: inline-block;
+            margin-right: 1rem;
+
+        }
+
+        @include breakpoint-up(large) {
+            grid-area: links;
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            line-height: 2rem;
+        }
+    }
+
+    .copyright {
+        align-items: baseline;
+
+        &__text {
+            padding-bottom: 1rem;
+            text-align: left;
+        }
+
+    }
+}
