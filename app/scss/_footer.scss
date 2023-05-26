@@ -50,6 +50,10 @@
         a {
             line-height: 2rem;
         }
+
+        @include breakpoint-up(large) {
+            grid-area: list;
+        }
     }
 
     .copyright {
@@ -58,7 +62,13 @@
         &__text {
             padding-bottom: 1rem;
             text-align: left;
+
+            @include breakpoint-up(large) {
+                grid-area: text;
+            }
+
         }
+
 
     }
 }

@@ -203,12 +203,22 @@ button,
 .footer__list a {
   line-height: 2rem;
 }
+@media (min-width: 64em) {
+  .footer__list {
+    grid-area: list;
+  }
+}
 .footer .copyright {
   align-items: baseline;
 }
 .footer .copyright__text {
   padding-bottom: 1rem;
   text-align: left;
+}
+@media (min-width: 64em) {
+  .footer .copyright__text {
+    grid-area: text;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
