@@ -5,6 +5,20 @@
     to {}
 }
 
+// here we will place the animations for the hero elements
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+
+// these keyframes are for the footer which animate the footer wavy motions
 @keyframes animateWave {
 
     0% {

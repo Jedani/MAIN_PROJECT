@@ -6,7 +6,7 @@
         width: 34rem;
         height: 25rem;
         margin: 2rem 2rem;
-        background-color: white;
+        background-color: $gray-bg;
         border-radius: 15px;
     }
 
@@ -15,7 +15,7 @@
         width: 23rem;
         height: 25rem;
         margin: 2rem 2rem;
-        background-color: white;
+        background-color: $gray-bg;
         border-radius: 10px;
     }
 
@@ -23,13 +23,16 @@
     ::after {
         content: '';
         position: absolute;
-        inset: 0;
+        inset: -.3rem;
+        z-index: -1;
+        background: conic-gradient(from var(--gradient-angle), $gray-bg,
+            $maroonish-bg, $bluish-bg, $gray-bg, $maroonish-bg);
         border-radius: inherit;
-        background: linear-gradient(0deg, $gray-bg, $maroonish-bg, $bluish-bg);
+        animation: rotation 15s linear infinite;
     }
 
     #box::after {
-        filter: blur(2.5rem);
+        filter: blur(0.5rem);
 
     }
 }

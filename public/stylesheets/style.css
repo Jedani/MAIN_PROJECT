@@ -1,4 +1,12 @@
 @keyframes fade-in {}
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
 @keyframes animateWave {
   0% {
     background-position-x: 62.5rem;
@@ -33,8 +41,6 @@ body {
   font: sans-serif;
   font-size: 1.125rem;
   background-color: black;
-  display: flex;
-  flex-direction: column;
 }
 
 a,
@@ -130,7 +136,7 @@ footer {
 .header__links a {
   position: relative;
   font-size: 0.875rem;
-  color: grey;
+  color: white;
   transition: color 350ms ease-in-out;
 }
 .header__links a:not(:last-child) {
@@ -175,6 +181,11 @@ footer {
   color: grey;
 }
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 .hero {
   display: flex;
 }
@@ -183,7 +194,7 @@ footer {
   width: 34rem;
   height: 25rem;
   margin: 2rem 2rem;
-  background-color: white;
+  background-color: #2b2d42;
   border-radius: 15px;
 }
 .hero__box_2 {
@@ -191,19 +202,21 @@ footer {
   width: 23rem;
   height: 25rem;
   margin: 2rem 2rem;
-  background-color: white;
+  background-color: #2b2d42;
   border-radius: 10px;
 }
 .hero #box::before,
 .hero ::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -0.3rem;
+  z-index: -1;
+  background: conic-gradient(from var(--gradient-angle), #2b2d42, #9e2a2b, #00b4d8, #2b2d42, #9e2a2b);
   border-radius: inherit;
-  background: linear-gradient(0deg, #2b2d42, #9e2a2b, #00b4d8);
+  animation: rotation 15s linear infinite;
 }
 .hero #box::after {
-  filter: blur(2.5rem);
+  filter: blur(0.5rem);
 }
 
 .footer {
