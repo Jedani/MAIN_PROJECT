@@ -1,18 +1,22 @@
 .hero {
-    display: flex;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 60% 40%;
+
+
+
 
     &__box {
         position: relative;
         width: 34rem;
         height: 25rem;
-        margin: 2rem 2rem;
         background-color: $gray-bg;
         border-radius: 15px;
 
         .text {
             position: relative;
             color: red;
-            margin-left: 1rem;
+
 
             >* {
                 text-shadow: 0 0 0.3em currentColor;
@@ -26,9 +30,8 @@
 
     &__box_2 {
         position: relative;
-        width: 23rem;
+        width: 20rem;
         height: 25rem;
-        margin: 2rem 2rem;
         background-color: $gray-bg;
         border-radius: 10px;
     }
