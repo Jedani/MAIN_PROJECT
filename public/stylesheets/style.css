@@ -196,7 +196,6 @@ footer {
 }
 .hero :nth-child(1) {
   grid-column-start: 2;
-  grid-column-end: 3;
 }
 .hero__box_2 {
   position: relative;
@@ -218,6 +217,10 @@ footer {
 }
 .hero #box::after {
   filter: blur(0.5rem);
+}
+
+.container {
+  min-height: 35rem;
 }
 
 .footer {
