@@ -23,7 +23,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -33,6 +33,9 @@ body {
   line-height: 1.3;
   font: sans-serif;
   font-size: 1.125rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 a,
@@ -173,15 +176,35 @@ footer {
   color: grey;
 }
 
-.hero__image {
-  background-image: url("../images/hero-bkg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 26rem;
+.hero {
+  display: flex;
 }
-.hero__text {
-  margin-top: 1rem;
+.hero__box {
+  position: relative;
+  width: 34rem;
+  height: 25rem;
+  margin: 2rem 2rem;
+  background-color: white;
+  border-radius: 50px;
+}
+.hero__box_2 {
+  position: relative;
+  width: 23rem;
+  height: 25rem;
+  margin: 2rem 2rem;
+  background-color: white;
+  border-radius: 50px;
+}
+.hero #box::before,
+.hero ::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(0deg, green, blue, grey);
+}
+.hero #box::after {
+  filter: blur(3.5rem);
 }
 
 .footer {
@@ -189,6 +212,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 8rem;
 }
 .footer__waves .wave {
   position: absolute;
