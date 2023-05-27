@@ -7,7 +7,7 @@
         height: 25rem;
         margin: 2rem 2rem;
         background-color: white;
-        border-radius: 50px;
+        border-radius: 15px;
     }
 
     &__box_2 {
@@ -16,7 +16,7 @@
         height: 25rem;
         margin: 2rem 2rem;
         background-color: white;
-        border-radius: 50px;
+        border-radius: 10px;
     }
 
     #box::before,
@@ -25,11 +25,11 @@
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        background: linear-gradient(0deg, green, blue, grey);
+        background: linear-gradient(0deg, $gray-bg, $maroonish-bg, $bluish-bg);
     }
 
     #box::after {
-        filter: blur(3.5rem);
+        filter: blur(2.5rem);
 
     }
 }

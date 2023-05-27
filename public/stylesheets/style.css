@@ -29,7 +29,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   line-height: 1.3;
   font: sans-serif;
   font-size: 1.125rem;
@@ -185,7 +184,7 @@ footer {
   height: 25rem;
   margin: 2rem 2rem;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 .hero__box_2 {
   position: relative;
@@ -193,7 +192,7 @@ footer {
   height: 25rem;
   margin: 2rem 2rem;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 .hero #box::before,
 .hero ::after {
@@ -201,10 +200,10 @@ footer {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(0deg, green, blue, grey);
+  background: linear-gradient(0deg, #2b2d42, #9e2a2b, #00b4d8);
 }
 .hero #box::after {
-  filter: blur(3.5rem);
+  filter: blur(2.5rem);
 }
 
 .footer {
