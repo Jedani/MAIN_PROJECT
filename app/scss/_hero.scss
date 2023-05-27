@@ -2,38 +2,21 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 60% 40%;
+    margin: 1.5rem 0;
 
-
-
-
-    &__box {
-        position: relative;
-        width: 34rem;
-        height: 25rem;
-        background-color: $gray-bg;
-        border-radius: 15px;
-
-        .text {
-            position: relative;
-            color: red;
-
-
-            >* {
-                text-shadow: 0 0 0.3em currentColor;
-            }
-
-
-        }
-
-
+    :nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 
     &__box_2 {
         position: relative;
         width: 20rem;
         height: 25rem;
+        margin-left: 2rem;
         background-color: $gray-bg;
         border-radius: 10px;
+
     }
 
     #box::before,

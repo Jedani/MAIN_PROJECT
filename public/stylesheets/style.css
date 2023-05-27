@@ -192,25 +192,17 @@ footer {
   display: grid;
   gap: 1rem;
   grid-template-columns: 60% 40%;
+  margin: 1.5rem 0;
 }
-.hero__box {
-  position: relative;
-  width: 34rem;
-  height: 25rem;
-  background-color: #2b2d42;
-  border-radius: 15px;
-}
-.hero__box .text {
-  position: relative;
-  color: red;
-}
-.hero__box .text > * {
-  text-shadow: 0 0 0.3em currentColor;
+.hero :nth-child(1) {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .hero__box_2 {
   position: relative;
   width: 20rem;
   height: 25rem;
+  margin-left: 2rem;
   background-color: #2b2d42;
   border-radius: 10px;
 }
