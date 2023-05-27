@@ -41,6 +41,7 @@ body {
   font: sans-serif;
   font-size: 1.125rem;
   background-color: black;
+  font-family: "Roboto Slab", serif;
 }
 
 a,
@@ -196,6 +197,14 @@ footer {
   margin: 2rem 2rem;
   background-color: #2b2d42;
   border-radius: 15px;
+}
+.hero__box .text {
+  position: relative;
+  color: red;
+  margin-left: 1rem;
+}
+.hero__box .text > * {
+  text-shadow: 0 0 0.3em currentColor;
 }
 .hero__box_2 {
   position: relative;

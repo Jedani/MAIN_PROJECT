@@ -8,6 +8,20 @@
         margin: 2rem 2rem;
         background-color: $gray-bg;
         border-radius: 15px;
+
+        .text {
+            position: relative;
+            color: red;
+            margin-left: 1rem;
+
+            >* {
+                text-shadow: 0 0 0.3em currentColor;
+            }
+
+
+        }
+
+
     }
 
     &__box_2 {
