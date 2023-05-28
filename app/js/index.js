@@ -1,13 +1,7 @@
-const menuLink = document.querySelector("#menuLink");
-const overlay = document.querySelector('#overlayid');
+// eslint-disable-next-line no-unused-vars
+import generator from './main.js';
+import menu from './mobile-menu.js';
 
-menuLink.addEventListener('click', () => {
-    if (menuLink.classList.contains('open')) {
-        menuLink.classList.remove('open');
-        overlay.classList.remove('scroll');
 
-    } else {
-        menuLink.classList.add('open');
-        overlay.classList.add('scroll');
-    }
-})
+menu();
+generator();
