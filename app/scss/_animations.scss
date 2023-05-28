@@ -42,3 +42,14 @@
     }
 
 }
+
+// these keyframes will be for the main section
+@keyframes move-background {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}

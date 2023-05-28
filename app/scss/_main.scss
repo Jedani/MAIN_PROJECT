@@ -1,36 +1,61 @@
 main {
     position: relative;
     min-height: 35rem;
+    padding: 2rem 0;
 
-    .container {
-        position: absolute;
-        width: 100%;
+    .background-container {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $gray-bg;
+        width: 100%;
 
-        .block {
-            position: relative;
-            width: 3rem;
-            height: 3rem;
-            background: magenta;
-            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 
-            &:nth-child(3n + 1) {
-                background: #444;
+        img {
+            height: 20rem;
+            width: 20rem;
+            position: absolute;
+            z-index: 3;
+            right: 1.2rem;
+        }
 
-            }
-
-            &:nth-child(3n + 2) {
-                background: #fff;
-            }
-
-            &:nth-child(3n + 3) {
-                background: skyblue;
-            }
+        .stars {
+            background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
 
         }
+
+        .twinkling {
+            height: 100%;
+            width: 50%;
+            background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+            background-size: 50px 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            animation: move-background 10s ease-in infinite;
+
+        }
+
+        // .clouds {
+        //     width: 10000px;
+        //     height: 100%;
+        //     background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+        //     background-size: 100px 100px;
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0;
+        //     bottom: 0;
+        //     z-index: 3;
+
+        // }
+
+
     }
+
 }
