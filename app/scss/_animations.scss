@@ -22,11 +22,11 @@
 @keyframes animateWave {
 
     0% {
-        background-position-x: 62.5rem;
+        background-position-x: 0;
     }
 
     100% {
-        background-position-x: 0;
+        background-position-x: 62.5rem;
     }
 
 }
@@ -34,22 +34,22 @@
 @keyframes animateWave_1 {
 
     0% {
-        background-position-x: 0;
+        background-position-x: 62.5rem;
     }
 
     100% {
-        background-position-x: 62.5rem;
+        background-position-x: 0;
     }
 
 }
 
 // these keyframes will be for the main section
 @keyframes move-background {
-    from {
+    0% {
         transform: translateX(0px);
     }
 
-    to {
+    100% {
         transform: translateX(100%);
     }
 }
