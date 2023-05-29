@@ -11,33 +11,27 @@
     <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
     <title>landing page</title>
 </head>
+<script type="module" defer src="app/js/index.js"></script>
 
-<body>
+<body id="bg-hex">
     <div id="overlayid" class="overlay">
     </div>
     <header class="header">
         <nav class="flex flex-jc-sb flex-ai-c">
-            <div class="ambient_light">
-                <div class="cube">
-                    <span style="--i:0"></span>
-                    <span style="--i:1"></span>
-                    <span style="--i:2"></span>
-                    <span style="--i:3"></span>
-                </div>
-            </div>
-            <a href="/" class="header__logo">
-            </a>
+            <a href=""></a>
             <a href="#" id="menuLink" class="header__menu hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             <div class="header__links hide-for-mobile">
-                <a href="http://">home</a>
-                <a href="http://">about</a>
-                <a href="http://">contact</a>
-                <a href="http://">projects</a>
-                <a href="http://">ideas</a>
+                <ul>
+                    <li><a href="http://">home</a></li>
+                    <li><a href="http://">about</a></li>
+                    <li><a href="http://">contact</a></li>
+                    <li><a href="http://">projects</a></li>
+                    <li> <a href="http://">ideas</a></li>
+                </ul>
             </div>
             <a href="#" class="button header__cta hide-for-mobile ">CONNECT WITH ME</a>
         </nav>
@@ -85,7 +79,6 @@
         </div>
         <p>&copy 2023 All rights reserved.</p>
     </footer>
-    <script type="module" defer src="app/js/index.js"></script>
 </body>
 
 </html

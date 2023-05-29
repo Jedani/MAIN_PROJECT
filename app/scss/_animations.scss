@@ -53,3 +53,27 @@
         transform: translateX(100%);
     }
 }
+
+// keyframes for the ambient lighting cube
+@keyframes rotate-pyramid {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+
+
+}
+
+// this is for the bg body
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
