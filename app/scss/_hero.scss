@@ -2,36 +2,46 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 60% 40%;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 
     :nth-child(1) {
         grid-column-start: 2;
 
     }
 
+    .text {
+        height: 100%;
+        width: 100%;
+        grid-column-start: 1;
+        color: ghostwhite;
+    }
+
     &__box_2 {
         position: relative;
         width: 90%;
         height: 33rem;
-        background-color: $gray-bg;
+        background-color: #262121;
         border-radius: 10px;
 
-    }
 
-    #box::before,
-    ::after {
-        content: '';
-        position: absolute;
-        inset: -.3rem;
-        z-index: -1;
-        background: conic-gradient(from var(--gradient-angle), $gray-bg,
-            $maroonish-bg, $bluish-bg, $gray-bg, $maroonish-bg);
-        border-radius: inherit;
-        animation: rotation 15s linear infinite;
-    }
 
-    #box::after {
-        filter: blur(0.5rem);
+        &::before,
+        ::after {
+            content: '';
+            position: absolute;
+            inset: -.2rem;
+            z-index: -1;
+            background: conic-gradient(from var(--gradient-angle), $clr3-bg, $clr4-bg,
+                $clr5-bg, $clr4-bg, $clr3-bg);
 
+
+            border-radius: inherit;
+            animation: rotate 15s linear infinite;
+        }
+
+        #box::after {
+            filter: blur(0.5rem);
+
+        }
     }
 }

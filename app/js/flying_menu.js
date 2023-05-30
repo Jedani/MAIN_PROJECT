@@ -1,4 +1,4 @@
-let list = document.querySelectorAll('.header__links a');
+let list = document.querySelectorAll('.links ul li a');
 
 function exchange() {
     list.forEach(link => {
