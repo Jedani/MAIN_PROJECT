@@ -33,7 +33,7 @@
             height: 100%;
             border-radius: inherit;
             background: pink;
-            transition: transform 3s;
+            transition: transform 1500ms;
             transform-style: preserve-3d;
 
 
@@ -58,9 +58,13 @@
 
             .back {
                 transform: rotateY(180deg) rotateZ(180deg);
-                background: blue;
-            }
 
+                .text {
+                    background: blue;
+
+                }
+
+            }
         }
     }
 }
