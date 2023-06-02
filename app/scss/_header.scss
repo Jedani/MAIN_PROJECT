@@ -1,129 +1,116 @@
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(blue, transparent);
-    display: none;
-
-    &.scroll {
-        display: block;
-        translate: 0 4rem;
-
-    }
-}
-
-.header__menu {
-
-    nav {
-        margin: 0 1rem;
-        margin-top: 1rem;
-        justify-content: space-between;
-        align-items: center;
-
-        .header_icon {
-            a {
+header {
+    min-height: 5rem;
 
 
-                span {
-                    display: block;
-                    width: 26px;
-                    height: 2px;
-                    background-color: black;
-                    transition: all 400ms ease-out;
-                    transform-origin: 6px 1px;
+    // nav {
+    //     margin: 0 1rem;
+    //     margin-top: 1rem;
+    //     justify-content: space-between;
+    //     align-items: center;
+
+    //     .header_icon {
+    //         a {
 
 
-                    &:not(:last-child) {
-                        margin-bottom: 3px;
-                    }
-                }
-
-                &.open {
-                    span:first-child {
-                        transform: rotate(45deg);
-                    }
-
-                    span:nth-child(2) {
-                        opacity: 0;
-                    }
-
-                    span:last-child {
-                        transform: rotate(-45deg);
-                    }
-                }
-
-            }
+    //             span {
+    //                 display: block;
+    //                 width: 26px;
+    //                 height: 2px;
+    //                 background-color: black;
+    //                 transition: all 400ms ease-out;
+    //                 transform-origin: 6px 1px;
 
 
-        }
+    //                 &:not(:last-child) {
+    //                     margin-bottom: 3px;
+    //                 }
+    //             }
 
-        .links {
+    //             &.open {
+    //                 span:first-child {
+    //                     transform: rotate(45deg);
+    //                 }
 
-            ul {
-                position: relative;
-                display: flex;
+    //                 span:nth-child(2) {
+    //                     opacity: 0;
+    //                 }
 
-                li {
-                    list-style: none;
+    //                 span:last-child {
+    //                     transform: rotate(-45deg);
+    //                 }
+    //             }
 
-                    a {
-                        text-transform: uppercase;
-                        position: relative;
-                        display: flex;
-                        color: ghostwhite;
+    //         }
 
 
-                        span {
-                            position: relative;
-                            transition: 500ms;
-                            overflow: hidden;
+    //     }
 
-                            .in {
-                                position: absolute;
-                                color: skyblue;
-                                left: 0;
-                                transform: translateY(100%);
-                            }
+    //     .links {
 
-                            .out {
-                                display: inline-flex;
-                            }
-                        }
+    //         ul {
+    //             position: relative;
+    //             display: flex;
 
-                        &:hover {
-                            span {
-                                .in {
-                                    transform: translateY(0);
+    //             li {
+    //                 list-style: none;
 
-                                }
+    //                 a {
+    //                     text-transform: uppercase;
+    //                     position: relative;
+    //                     display: flex;
+    //                     color: ghostwhite;
 
-                                .out {
-                                    transform: translateY(-100%);
-                                }
-                            }
-                        }
-                    }
 
-                    &:not(:last-child) {
-                        margin-right: 1rem;
+    //                     span {
+    //                         position: relative;
+    //                         transition: 500ms;
+    //                         overflow: hidden;
 
-                    }
-                }
+    //                         .in {
+    //                             position: absolute;
+    //                             color: skyblue;
+    //                             left: 0;
+    //                             transform: translateY(100%);
+    //                         }
 
-            }
-        }
+    //                         .out {
+    //                             display: inline-flex;
+    //                         }
+    //                     }
 
-        .cta {
-            font-size: small;
-            color: ghostwhite;
-            transition: opacity 300ms ease-in-out;
+    //                     &:hover {
+    //                         span {
+    //                             .in {
+    //                                 transform: translateY(0);
 
-            &:hover {
-                opacity: 0.75;
-            }
-        }
-    }
+    //                             }
+
+    //                             .out {
+    //                                 transform: translateY(-100%);
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+
+    //                 &:not(:last-child) {
+    //                     margin-right: 1rem;
+
+    //                 }
+    //             }
+
+    //         }
+    //     }
+
+    //     .cta {
+    //         font-size: small;
+    //         color: ghostwhite;
+    //         transition: opacity 300ms ease-in-out;
+
+    //         &:hover {
+    //             opacity: 0.75;
+    //         }
+    //     }
+    // }
+
 
 }
