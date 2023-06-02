@@ -38,7 +38,7 @@
     </header>
     <main>
         <section class="hero">
-            <div class="text">
+            <div class="intro">
                 <p>hi my name is allan</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum tempora tenetur, fuga quod ducimus, neque sequi molestiae odit laudantium inventore, laboriosam iure nesciunt commodi temporibus consequuntur dolorem alias, impedit perspiciatis!</p>
             </div>
@@ -49,12 +49,56 @@
                         <p class="subtitle">time for me</p>
                     </div>
                     <div class="back">
-                        <p class="text">this would be some of the things to appear on the background</p>
+                        <div class="text">
+                            <p>this would be some of the things to appear on the background</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <div class="background-container">
+            <div class="stack-cards">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="./public/images/js.svg" alt="">
+                    </div>
+                    <div class="details">
+                        <h2>html | css | js</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci dolores quisquam nihil mollitia voluptas numquam atque ea! Repellendus accusantium eos officiis laboriosam incidunt neque sit nulla itaque. Reprehenderit harum, neque.</p>
+                    </div>
+                    <a href="#">read more</a>
+                </div>
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="./public/images/react-2.svg" alt="">
+                    </div>
+                    <div class="details">
+                        <h2>react</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci dolores quisquam nihil mollitia voluptas numquam atque ea! Repellendus accusantium eos officiis laboriosam incidunt neque sit nulla itaque. Reprehenderit harum, neque.</p>
+                    </div>
+                    <a href="#">read more</a>
+                </div>
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="./public/images/python-5.svg" alt="">
+                    </div>
+                    <div class="details">
+                        <h2>python</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci dolores quisquam nihil mollitia voluptas numquam atque ea! Repellendus accusantium eos officiis laboriosam incidunt neque sit nulla itaque. Reprehenderit harum, neque.</p>
+                    </div>
+                    <a href="#">read more</a>
+                </div>
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="./public/images/nodejs-2.svg" alt="">
+                    </div>
+                    <div class="details">
+                        <h2>node</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci dolores quisquam nihil mollitia voluptas numquam atque ea! Repellendus accusantium eos officiis laboriosam incidunt neque sit nulla itaque. Reprehenderit harum, neque.</p>
+                    </div>
+                    <a href="#">read more</a>
+                </div>
+            </div>
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="moon">
             <div class="stars"></div>
             <div class="twinkling"></div>
@@ -85,6 +129,16 @@
         </div>
         <p>&copy 2023 All rights reserved.</p>
     </footer>
+    <script type="text/javascript" src="./app/js/tilt.js"></script>
+    <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".content"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+    });
+
+    </script>
 </body>
 
 </html

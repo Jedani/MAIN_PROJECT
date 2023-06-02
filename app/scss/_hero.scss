@@ -2,19 +2,16 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 55% 45%;
-    margin: 1rem 0;
+    margin: 1rem 1rem;
 
     :nth-child(1) {
         grid-column-start: 2;
 
     }
 
-    .text {
-        height: 100%;
-        width: 100%;
-        margin-left: 1rem;
+    .intro {
         grid-column-start: 1;
-        color: ghostwhite;
+
     }
 
     &__box_2 {
@@ -33,8 +30,8 @@
             height: 100%;
             border-radius: inherit;
             background: pink;
-            transition: transform 1500ms;
             transform-style: preserve-3d;
+            transition: transform 2000ms;
 
 
             &:hover {
@@ -53,14 +50,16 @@
             }
 
             .front {
-                background: blueviolet;
+                background: #1b1124;
             }
 
             .back {
                 transform: rotateY(180deg) rotateZ(180deg);
 
                 .text {
-                    background: blue;
+                    height: 100%;
+                    width: 100%;
+                    background: black;
 
                 }
 
