@@ -9,6 +9,7 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -58,6 +59,20 @@ button,
     }
 }
 
+header {
+    min-height: 5rem;
+}
+
+main {
+    flex-grow: 2;
+
+
+    div {
+        overflow-y: hidden;
+
+    }
+
+}
 
 footer {
     position: relative;

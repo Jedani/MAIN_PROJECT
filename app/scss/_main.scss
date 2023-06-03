@@ -1,12 +1,43 @@
-main {
-    flex-grow: 2;
+.morning {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 5rem);
 
-    .morning {
-        height: calc(100vh - 5rem);
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2rem;
+        background: linear-gradient(to top, #3a4009, transparent);
+        z-index: 1;
     }
 
-    div {
+
+    img {
+        @include image-properties;
+
+        &:nth-child(2) {
+            width: 30%;
+            height: 30%;
+            top: 43%;
+            left: 17%;
+        }
+
+        &:nth-child(7) {
+            top: 50%;
+            z-index: 1;
+        }
+
+    }
+
+    .appearing-intro {
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        height: 100vh;
+        height: 3rem;
+        z-index: 1;
+        background: $water;
     }
 }

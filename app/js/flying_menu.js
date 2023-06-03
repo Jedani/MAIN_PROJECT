@@ -1,31 +1,32 @@
-let list = document.querySelectorAll('.links ul li a');
+// let list = document.querySelectorAll('.links ul li a');
 
-function exchange() {
-    list.forEach(link => {
-        let letters = link.textContent.split('');
-        link.textContent = '';
-        letters.forEach((letter, i) => {
-            i++;
-            let span = document.createElement("span");
-            let delay = i / 16;
+// function exchange() {
+//     list.forEach(link => {
+//         let letters = link.textContent.split('');
+//         link.textContent = '';
+//         letters.forEach((letter, i) => {
+//             i++;
+//             let span = document.createElement("span");
+//             let delay = i / 16;
 
-            let letterOut = document.createElement('span');
-            letterOut.textContent = letter;
-            letterOut.style.transitionDelay = '${delay}s';
-            letterOut.classList.add('out');
-            span.append(letterOut);
+//             let letterOut = document.createElement('span');
+//             letterOut.textContent = letter;
+//             letterOut.style.transitionDelay = '${delay}s';
+//             letterOut.classList.add('out');
+//             span.append(letterOut);
 
 
-            let letterin = document.createElement('span');
-            letterin.textContent = letter;
-            letterin.style.transitionDelay = '${delay}s';
-            letterin.classList.add('in');
-            span.append(letterin);
+//             let letterin = document.createElement('span');
+//             letterin.textContent = letter;
+//             letterin.style.transitionDelay = '${delay}s';
+//             letterin.classList.add('in');
+//             span.append(letterin);
 
-            link.append(span);
-        })
+//             link.append(span);
+//         })
 
-    })
-}
+//     })
+// }
 
-export default exchange;
+// export default exchange;
+
