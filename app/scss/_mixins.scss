@@ -30,3 +30,15 @@ $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.43
     height: 100%;
     object-fit: cover;
 }
+
+@mixin appearing-div {
+    .appearing-intro {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+        z-index: 1;
+        background: $water;
+    }
+}

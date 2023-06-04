@@ -3,7 +3,28 @@
     width: 100%;
     min-height: 100vh;
 
+
+
     img {
         @include image-properties;
+
+        &:nth-child(1) {
+            top: -5%;
+            width: 25%;
+            height: 40%;
+        }
+
+
+
     }
+
+    .remark-intro {
+        height: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: brown;
+    }
+
 }
