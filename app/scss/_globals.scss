@@ -60,11 +60,21 @@ button,
 }
 
 header {
-    min-height: 5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    min-height: 4rem;
 }
 
 main {
     flex-grow: 2;
+    position: relative;
+    top: 5rem;
 
 
     div {

@@ -53,11 +53,21 @@ button,
 }
 
 header {
-  min-height: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  min-height: 4rem;
 }
 
 main {
   flex-grow: 2;
+  position: relative;
+  top: 5rem;
 }
 main div {
   overflow-y: hidden;
@@ -69,6 +79,109 @@ footer {
   background: rgb(54, 123, 161);
   min-height: 9.25rem;
   padding: 1.25rem 3.125rem;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+nav .logo {
+  height: 60px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  padding-left: 20px;
+}
+nav .hamburger_icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: blue;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .hamburger_icon::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: white;
+  transform: translateY(-5px);
+  transition: 400ms;
+}
+nav .hamburger_icon::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: white;
+  transform: translateY(5px);
+  transition: 400ms;
+}
+nav .active {
+  background: pink;
+}
+nav .active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+nav .active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+nav .links {
+  position: relative;
+  height: 60px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 800ms;
+  width: 0px;
+  overflow: hidden;
+}
+nav .links ul {
+  position: relative;
+  display: flex;
+}
+nav .links ul li {
+  list-style: none;
+}
+nav .links ul li a {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  color: #bb1a1a;
+  letter-spacing: 3px;
+}
+nav .links ul li a span {
+  position: relative;
+  transition: 500ms;
+  overflow: hidden;
+}
+nav .links ul li a span .in {
+  position: absolute;
+  color: #FFEB3B;
+  left: 0;
+  transform: translateY(100%);
+}
+nav .links ul li a span .out {
+  display: inline-flex;
+}
+nav .links ul li a:hover span .in {
+  transform: translateY(0);
+}
+nav .links ul li a:hover span .out {
+  transform: translateY(-100%);
+}
+nav .links ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+nav .slide {
+  width: 50%;
 }
 
 @property --gradient-angle {
@@ -129,7 +242,7 @@ footer {
 .morning {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 4rem);
 }
 .morning::before {
   content: "";
