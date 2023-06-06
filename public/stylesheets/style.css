@@ -1,3 +1,13 @@
+@keyframes footer-moving {
+  0% {
+    left: -20px;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    left: 100%;
+  }
+}
 html {
   height: 100%;
 }
@@ -16,28 +26,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: darkgray;
+  background: darkgrey;
   color: ghostwhite;
   line-height: 1.3;
   font-family: "Roboto Slab", serif;
   overflow-x: hidden;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-}
-
-button,
-.button {
-  padding: 0.875rem 1.875rem;
-  background: linear-gradient(to right, skyblue, grey);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  color: ghostwhite;
-  font-weight: 400;
 }
 
 @media (max-width: 63.9375em) {
@@ -76,9 +81,22 @@ main div {
 footer {
   position: relative;
   width: 100%;
-  background: rgb(54, 123, 161);
-  min-height: 9.25rem;
-  padding: 1.25rem 3.125rem;
+  bottom: 0;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: white;
+  padding: 25px 0 30px;
+  border-top-left-radius: 125px;
+}
+@media (max-width: 39.9375em) {
+  footer footer {
+    bottom: unset;
+  }
+  footer footer .col {
+    flex-basis: 100%;
+  }
+  footer footer .col:nth-child(2), footer footer .col:nth-child(3) {
+    flex-basis: 100%;
+  }
 }
 
 nav {
@@ -97,6 +115,7 @@ nav .hamburger_icon {
   position: absolute;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
   cursor: pointer;
   background: blue;
   right: 0;
@@ -359,11 +378,95 @@ nav .slide {
   background: black;
 }
 
-.footer {
+.footer .row {
   display: flex;
-  justify-content: center;
+  width: 85%;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer .row .col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+.footer .row .col:nth-child(2), .footer .row .col:nth-child(3) {
+  flex-basis: 15%;
+}
+.footer .row .col .logo {
+  width: 80px;
+  margin-bottom: 30px;
+}
+.footer .row .col h3 {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.footer .row .col h3 .underline {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #767676;
+  border-radius: 3px;
+  top: 30px;
+  left: 0;
+  overflow: hidden;
+}
+.footer .row .col h3 .underline span {
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  background: whitesmoke;
+  border-radius: 3px;
+  top: -1px;
+  left: 10px;
+  animation: footer-moving 3000ms linear infinite;
+}
+.footer .row .col ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer .row .col ul li a {
+  text-decoration: none;
+  color: white;
+}
+.footer .row .col img {
+  width: 25px;
+}
+.footer .row .col form {
+  padding-bottom: 15px;
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+.footer .row .col form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: 0;
+}
+.footer .row .col form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.footer .row .col .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid white;
+  margin: 20px auto;
+}
+.footer .copyright {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
