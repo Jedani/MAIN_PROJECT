@@ -58,21 +58,20 @@ a:hover {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   width: 100%;
-  background: transparent;
-  backdrop-filter: blur(10px);
+  height: 100%;
   z-index: 100;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  min-height: 4rem;
+  background: #c4ad7a;
+  border-bottom-left-radius: 20px;
 }
 
 main {
   flex-grow: 2;
   position: relative;
-  top: 5rem;
 }
 main div {
   overflow-y: hidden;
@@ -105,21 +104,26 @@ nav {
   justify-content: space-between;
 }
 nav .logo {
-  height: 60px;
-  color: black;
-  font-weight: 700;
+  position: relative;
+  height: 100%;
   cursor: pointer;
   padding-left: 20px;
 }
+nav .logo .nav-logo {
+  position: absolute;
+  height: 40px;
+  top: 10px;
+}
 nav .hamburger_icon {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
   cursor: pointer;
-  background: blue;
-  right: 0;
-  top: 0;
+  background: #00A8D2;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,40 +266,29 @@ nav .slide {
   position: relative;
   width: 100%;
   min-height: calc(100vh - 4rem);
+  display: flex;
 }
-.morning::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2rem;
-  background: linear-gradient(to top, #3a4009, transparent);
-  z-index: 1;
+.morning .morning-grid {
+  display: grid;
+  height: auto;
+  width: inherit;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 20% 30%;
+  gap: 1rem;
 }
-.morning img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.morning .morning-grid :nth-child(1) {
+  background: purple;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
-.morning img:nth-child(2) {
-  width: 30%;
-  height: 30%;
-  top: 43%;
-  left: 17%;
+.morning .morning-grid :nth-child(2) {
+  background: yellowgreen;
 }
-.morning img:nth-child(7) {
-  top: 50%;
-  z-index: 1;
+.morning .morning-grid :nth-child(3) {
+  background: grey;
 }
-.morning .appearing-intro {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3rem;
-  z-index: 1;
-  background: #d4f1f9;
+.morning .morning-grid :nth-child(4) {
+  background: black;
 }
 
 .night {
@@ -418,7 +411,7 @@ nav .slide {
   height: 100%;
   background: whitesmoke;
   border-radius: 3px;
-  top: -1px;
+  top: 0px;
   left: 10px;
   animation: footer-moving 3000ms linear infinite;
 }

@@ -54,22 +54,20 @@ a:hover {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     width: 100%;
-    background: transparent;
-    backdrop-filter: blur(10px);
+    height: 100%;
     z-index: 100;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-    min-height: 4rem;
+    background: #c4ad7a;
+    border-bottom-left-radius: 20px;
 }
 
 main {
     flex-grow: 2;
     position: relative;
-    top: 5rem;
-
 
     div {
         overflow-y: hidden;
