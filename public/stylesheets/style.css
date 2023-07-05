@@ -62,7 +62,7 @@ header {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 5rem;
   z-index: 100;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   background: #c4ad7a;
@@ -72,6 +72,7 @@ header {
 main {
   flex-grow: 2;
   position: relative;
+  margin-top: auto;
 }
 main div {
   overflow-y: hidden;
@@ -102,6 +103,7 @@ nav {
   position: relative;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 nav .logo {
   position: relative;
@@ -157,6 +159,7 @@ nav .active::after {
 }
 nav .links {
   position: relative;
+  padding-top: 2%;
   height: 60px;
   right: 60px;
   display: flex;
@@ -212,63 +215,13 @@ nav .slide {
   initial-value: 0deg;
   inherits: false;
 }
-.noon {
+.hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-}
-.noon img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.noon img:nth-child(1) {
-  top: -5%;
-  width: 25%;
-  height: 40%;
-}
-.noon .remark-intro {
-  height: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: brown;
-}
-
-.hero-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(1px);
-  background: transparent;
-  display: grid;
-  grid-template-areas: 35% 65%;
-  gap: 2rem;
-}
-.hero-container .left-grid {
-  grid-column-start: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hero-container .right-grid {
-  grid-column-start: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.morning {
-  position: relative;
-  width: 100%;
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 5rem);
   display: flex;
 }
-.morning .morning-grid {
+.hero .hero-grid {
   display: grid;
   height: auto;
   width: inherit;
@@ -276,19 +229,23 @@ nav .slide {
   grid-template-rows: 50% 20% 30%;
   gap: 1rem;
 }
-.morning .morning-grid :nth-child(1) {
+.hero .hero-grid :nth-child(1) {
   background: purple;
   grid-row-start: 1;
   grid-row-end: 4;
 }
-.morning .morning-grid :nth-child(2) {
+.hero .hero-grid :nth-child(2) {
   background: yellowgreen;
 }
-.morning .morning-grid :nth-child(3) {
+.hero .hero-grid :nth-child(3) {
   background: grey;
 }
-.morning .morning-grid :nth-child(4) {
+.hero .hero-grid :nth-child(4) {
   background: black;
+}
+
+.projects {
+  min-height: 100vh;
 }
 
 .night {
@@ -363,12 +320,6 @@ nav .slide {
   to {
     transform: translateY(-2000px);
   }
-}
-
-.convince-message {
-  min-height: 50vh;
-  width: 100%;
-  background: black;
 }
 
 .footer .row {

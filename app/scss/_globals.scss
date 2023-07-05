@@ -58,7 +58,7 @@ header {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 5rem;
     z-index: 100;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     background: #c4ad7a;
@@ -68,6 +68,7 @@ header {
 main {
     flex-grow: 2;
     position: relative;
+    margin-top: auto;
 
     div {
         overflow-y: hidden;

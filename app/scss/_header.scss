@@ -2,6 +2,7 @@ nav {
     position: relative;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 
     .logo {
         position: relative;
@@ -72,6 +73,7 @@ nav {
 
     .links {
         position: relative;
+        padding-top: 2%;
         height: 60px;
         right: 60px;
         display: flex;
