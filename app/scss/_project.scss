@@ -1,3 +1,27 @@
 .projects {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: black;
+
+    .project {
+        border: 10px solid red;
+
+        .phone {
+            border: 2px solid blue;
+            width: 320px;
+            position: relative;
+
+            .screen {
+                height: 571px;
+                width: 267px;
+                background: purple;
+                position: absolute;
+                top: 15px;
+                left: 16px;
+                border-radius: 28px;
+            }
+
+        }
+    }
 }

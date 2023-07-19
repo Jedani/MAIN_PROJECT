@@ -65,7 +65,7 @@ header {
   height: 5rem;
   z-index: 100;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  background: #c4ad7a;
+  background: transparent;
   border-bottom-left-radius: 20px;
 }
 
@@ -246,6 +246,26 @@ nav .slide {
 
 .projects {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: black;
+}
+.projects .project {
+  border: 10px solid red;
+}
+.projects .project .phone {
+  border: 2px solid blue;
+  width: 320px;
+  position: relative;
+}
+.projects .project .phone .screen {
+  height: 571px;
+  width: 267px;
+  background: purple;
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  border-radius: 28px;
 }
 
 .night {
