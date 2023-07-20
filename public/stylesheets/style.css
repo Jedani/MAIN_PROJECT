@@ -244,6 +244,18 @@ nav .slide {
   background: black;
 }
 
+.responsiveParallax {
+  height: 30vh;
+  background: pink;
+  text-align: center;
+}
+
+.projectParallax {
+  height: 30vh;
+  background: purple;
+  text-align: center;
+}
+
 .projects {
   min-height: 100vh;
   display: flex;
